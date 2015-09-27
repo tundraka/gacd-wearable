@@ -1,7 +1,11 @@
 # Getting the step 5 tidy set.
 library(data.table)
 
-data <- fread('clean/data.csv', header=F)
-data[, lapply(.SD, mean), .(activity, subject)]
+cleandata <- fread('clean/data.csv', header=F, colClasses=c(rep('numeric', 66), rep('factor', 2)))
 
-write.csv(data, file='clean/subset.csv', sep=',', row.names=F)
+cleandata$V67 <- as.factor(cleandata$V67)
+cleandata$V68 <- as.factor(cleandata$V68)
+
+cleandata[, lapply(.SD, mean), .(V67, V68)]
+
+write.csv(cleandata, file='clean/subset.csv', sep=',', row.names=F)
