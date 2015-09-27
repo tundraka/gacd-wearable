@@ -80,7 +80,7 @@ test <- processSet(testFiles, referenceFiles, 'test')
 full <- rbind(data, test)
 
 # Output file
-cleanFileNoNames <- 'clean/subset.csv'
+cleanFileNoNames <- 'clean/data.csv'
 
 # Create output dir if it doesn't exists
 if (!dir.exists('clean')) {
