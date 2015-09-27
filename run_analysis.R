@@ -88,4 +88,4 @@ if (!dir.exists('clean')) {
 }
 
 # Write the consolidated data set.
-write.csv(full, file=cleanFileNoNames, sep=',', row.names=F)
+write.table(full, file=cleanFileNoNames, sep=',', col.names=F, row.names=F)

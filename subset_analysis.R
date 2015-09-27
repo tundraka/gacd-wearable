@@ -6,6 +6,6 @@ cleandata <- fread('clean/data.csv', header=F, colClasses=c(rep('numeric', 66), 
 cleandata$V67 <- as.factor(cleandata$V67)
 cleandata$V68 <- as.factor(cleandata$V68)
 
-cleandata[, lapply(.SD, mean), .(V67, V68)]
+subset <- cleandata[, lapply(.SD, mean), .(V67, V68)]
 
-write.csv(cleandata, file='clean/subset.csv', sep=',', row.names=F)
+write.table(subset, file='clean/subset.csv', sep=',', col.names=F, row.names=F)
