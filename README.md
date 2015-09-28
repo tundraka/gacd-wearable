@@ -6,6 +6,10 @@ Getting and Cleaning Data - Course Project - Human Activity Recognition Using Sm
 There are two scripts that will perform the points that were requested in the
 project.
 
+These scripts require the data in `https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip`,
+the script `run_analysis.R` won't download and unzip the data, it should be
+alredy place under the `data` directory.
+
 - run_analysis.R
 - subset_analysis.R
 
